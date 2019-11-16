@@ -6,13 +6,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.parse.SignUpCallback;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -38,7 +38,6 @@ public class LoginActivity extends AppCompatActivity {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
                 login(username, password);
-                
             }
         });
         btnSignup.setOnClickListener(new View.OnClickListener() {
@@ -46,41 +45,31 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String username = etUsername.getText().toString();
                 String password = etPassword.getText().toString();
-                signup(username, password);
+                goSignupActivity();
             }
         });
     }
 
-    private void signup(String username, String password) {
-        ParseUser user = new ParseUser();
-        user.setUsername(username);
-        user.setPassword(password);
-        user.signUpInBackground(new SignUpCallback() {
-            @Override
-            public void done(ParseException e) {
-                if (e == null) {
-                    // Hooray! Let them use the app now.
-                    Log.d(TAG, "sign up success");
-                    goMainActivity();
-                } else {
-                    // Sign up didn't succeed. Look at the ParseException
-                    // to figure out what went wrong
-                    Log.e(TAG, "sign up error");
-                    e.printStackTrace();
-                    return;
-                }
-            }
-        });
+
+
+    private void goSignupActivity() {
+        Log.d(TAG, "navigate to sign up activity");
+        Intent i = new Intent(this, SignupActivity.class);
+        startActivity(i);
+        finish();
     }
 
     private void login(String username, String password) {
+        //Toast.makeText(this, "test!", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "test");
         ParseUser.logInInBackground(username, password, new LogInCallback() {
             @Override
             public void done(ParseUser user, ParseException e) {
                 if (e != null) {
                     //TODO: better error handling
                     Log.e(TAG, "issue with login");
-                    e.printStackTrace();
+                    Toast.makeText(LoginActivity.this, "there is no user, please sign up", Toast.LENGTH_SHORT).show();
+
                     return;
                 }
                 //TODO: navigate to new activity if the user has signed properly.

@@ -1,0 +1,3 @@
+how to open Parse
+from terminal:
+parse-dashboard --appId kun-instagram-codepath --masterKey CodepathInstagramMoveFast --serverURL "http://kun-instagram-codepath.herokuapp.com/parse"
