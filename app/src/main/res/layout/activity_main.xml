@@ -7,35 +7,11 @@
     android:layout_margin="10dp"
     tools:context=".MainActivity">
 
-   <EditText
-       android:id="@+id/etDescription"
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:ems="10"
-       android:hint="Description..."
-       android:inputType="none"/>
-    <Button
-        android:id="@+id/btnCaptureImage"
+    <FrameLayout
+        android:id="@+id/flContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/etDescription"
-        android:text="Take picture"/>
-
-    <ImageView
-        android:id="@+id/ivPostImage"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@id/btnCaptureImage"
-        android:layout_marginTop="-3dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <Button
-        android:id="@+id/btnSubmit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btnCaptureImage"
-        android:layout_marginTop="201dp"
-        android:text="Submit" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -43,10 +19,5 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         app:menu="@menu/menu_bottom_navigation" />
-<!--    <Button-->
-<!--        android:id="@+id/btnLogout"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:text="Log out" />-->
+
 </RelativeLayout>

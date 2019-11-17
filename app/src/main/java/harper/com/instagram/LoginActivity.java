@@ -50,8 +50,6 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
-
-
     private void goSignupActivity() {
         Log.d(TAG, "navigate to sign up activity");
         Intent i = new Intent(this, SignupActivity.class);
@@ -68,6 +66,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (e != null) {
                     //TODO: better error handling
                     Log.e(TAG, "issue with login");
+                    e.printStackTrace();
                     Toast.makeText(LoginActivity.this, "there is no user, please sign up", Toast.LENGTH_SHORT).show();
 
                     return;

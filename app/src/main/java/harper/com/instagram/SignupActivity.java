@@ -14,10 +14,9 @@ import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
 public class SignupActivity extends AppCompatActivity {
-    private static final String TAG = "LoginActivity";
+    private static final String TAG = "SignupActivity";
     private EditText etUsername;
     private EditText etPassword;
-    private Button btnLogin;
     private Button btnSignup;
 
     @Override

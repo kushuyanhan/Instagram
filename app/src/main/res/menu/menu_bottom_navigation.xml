@@ -9,14 +9,14 @@
         app:showAsAction="always"/>
 
     <item
-        android:id="@+id/action_use_post"
+        android:id="@+id/action_new_post"
         android:icon="@drawable/instagram_new_post_outline_24"
-        android:title="Home"
+        android:title="New"
         app:showAsAction="always"/>
 
     <item
         android:id="@+id/action_user"
         android:icon="@drawable/instagram_user_outline_24"
-        android:title="Home"
+        android:title="User"
         app:showAsAction="always"/>
 </menu>
