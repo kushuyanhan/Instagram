@@ -48,8 +48,6 @@ public class ComposeFragment extends Fragment {
     private ImageView ivPostImage;
     private Button btnSubmit;
 
-
-
     public final static int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 1034;
     public String photoFileName = "photo.jpg";
     private File photoFile;
@@ -73,7 +71,6 @@ public class ComposeFragment extends Fragment {
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnSubmit = view.findViewById(R.id.btnSubmit);
 
-
         btnCaptureImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +78,6 @@ public class ComposeFragment extends Fragment {
             }
         });
         btnSubmit.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View view) {
                 String description = etDescription.getText().toString();
@@ -95,8 +91,6 @@ public class ComposeFragment extends Fragment {
                 savePost(description, user, photoFile);
             }
         });
-
-
     }
     private void launchCamera() {
         // create Intent to take a picture and return control to the calling application
@@ -153,10 +147,12 @@ public class ComposeFragment extends Fragment {
     }
 
     private void savePost(String description, ParseUser parseUser, File photoFile) {
-        Post post = new Post();
+        final Post post = new Post();
         post.setDescription(description);
         post.setUser(parseUser);
         post.setImage(new ParseFile(photoFile));
+        post.setLike(false);
+        post.setLikes(0);
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
