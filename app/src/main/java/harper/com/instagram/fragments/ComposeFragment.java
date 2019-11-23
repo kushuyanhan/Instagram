@@ -28,7 +28,7 @@ import com.parse.SaveCallback;
 
 import java.io.File;
 
-import harper.com.instagram.Post;
+import harper.com.instagram.model.Post;
 import harper.com.instagram.R;
 
 import static android.app.Activity.RESULT_OK;

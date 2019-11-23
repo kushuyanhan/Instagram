@@ -1,4 +1,4 @@
-package harper.com.instagram;
+package harper.com.instagram.activity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import harper.com.instagram.R;
 import harper.com.instagram.fragments.ComposeFragment;
 import harper.com.instagram.fragments.PostsFragment;
 import harper.com.instagram.fragments.ProfileFragment;
@@ -38,7 +39,6 @@ public class MainActivity extends AppCompatActivity {
                         fragment = new ComposeFragment();
                         break;
                     case R.id.action_user:
-                        //todo: swap fragment here
                         fragment = new ProfileFragment();
                         break;
                     default:

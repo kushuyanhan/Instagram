@@ -5,6 +5,8 @@ import android.app.Application;
 import com.parse.Parse;
 import com.parse.ParseObject;
 
+import harper.com.instagram.model.Post;
+
 /**
  * Created: xuemaomao
  * Date: 2019-11-13

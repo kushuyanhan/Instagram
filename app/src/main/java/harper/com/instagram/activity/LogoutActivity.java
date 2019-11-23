@@ -1,8 +1,10 @@
-package harper.com.instagram;
+package harper.com.instagram.activity;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import harper.com.instagram.R;
 
 public class LogoutActivity extends AppCompatActivity {
 
