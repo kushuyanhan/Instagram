@@ -35,6 +35,8 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 'https://imgur.com/a/KJmiRp2' 
+![InstagramUpdate2](https://user-images.githubusercontent.com/31453879/111380091-24115f00-8661-11eb-9707-94bb6fefc541.gif)
+
 
 <img src='https://imgur.com/a/KJmiRp2' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
